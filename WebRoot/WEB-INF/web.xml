@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  
+  <!-- Filter的配置！ -->
+	<filter>
+		<filter-name>SetCharacterEncodingFilter</filter-name>
+		<filter-class>filter.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+		<filter-mapping>
+		<filter-name>SetCharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>servlet.user.UserLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>adminLogin</servlet-name>
+    <servlet-class>servlet.admin.adminLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>JoinTrain</servlet-name>
+    <servlet-class>servlet.user.JoinTrain</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePersonDepartmentAndPost</servlet-name>
+    <servlet-class>servlet.admin.ChangePersonDepartmentAndPost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManageAPersonTrain</servlet-name>
+    <servlet-class>servlet.admin.ManageAPersonTrain</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManageTrain</servlet-name>
+    <servlet-class>servlet.admin.ManageTrain</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagePerson</servlet-name>
+    <servlet-class>servlet.admin.ManagePerson</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManageDepartment</servlet-name>
+    <servlet-class>servlet.admin.ManageDepartment</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManageBasePost</servlet-name>
+    <servlet-class>servlet.admin.ManageBasePost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryPerson</servlet-name>
+    <servlet-class>servlet.admin.QueryPerson</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManageADepartmentPost</servlet-name>
+    <servlet-class>servlet.admin.ManageADepartmentPost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManageAPersonDepartment</servlet-name>
+    <servlet-class>servlet.admin.ManageAPersonDepartment</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>showWageTab</servlet-name>
+    <servlet-class>servlet.admin.showWageTab</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminLogin</servlet-name>
+    <url-pattern>/adminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JoinTrain</servlet-name>
+    <url-pattern>/admin/JoinTrain</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePersonDepartmentAndPost</servlet-name>
+    <url-pattern>/admin/ChangePersonDepartmentAndPost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageAPersonTrain</servlet-name>
+    <url-pattern>/admin/ManageAPersonTrain</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageTrain</servlet-name>
+    <url-pattern>/admin/ManageTrain</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagePerson</servlet-name>
+    <url-pattern>/admin/ManagePerson</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageDepartment</servlet-name>
+    <url-pattern>/admin/ManageDepartment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageBasePost</servlet-name>
+    <url-pattern>/admin/ManageBasePost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryPerson</servlet-name>
+    <url-pattern>/admin/QueryPerson</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageADepartmentPost</servlet-name>
+    <url-pattern>/admin/ManageADepartmentPost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageAPersonDepartment</servlet-name>
+    <url-pattern>/admin/ManageAPersonDepartment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>showWageTab</servlet-name>
+    <url-pattern>/admin/showWageTab</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

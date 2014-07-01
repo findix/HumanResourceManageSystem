@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+     
+    <default-config>
+         
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="jdbcUrl">jdbc:sqlserver://localhost:1433;databaseName=HR</property>
+        <property name="user">sa</property>
+        <property name="password">1234</property>
+         
+        <property name="initialPoolSize">10</property>
+ 
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+         
+    </default-config>
+     
+    <!-- named-config可以采取多个配置 -->
+    <named-config name="mysql">
+        <property name="acquireIncrement">50</property>
+ 
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">100</property><!-- intergalactoApp adopts a different approach to configuring statement caching -->
+        <property name="maxStatements">10</property>
+        <property name="maxStatementsPerConnection">5</property>
+         
+    </named-config>
+ 
+     
+ 
+</c3p0-config>
